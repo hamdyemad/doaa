@@ -1,0 +1,7 @@
+.home {
+    @extend %info;
+    .card-header {
+        background: #fff;
+        border: 1px solid #cacaca;
+    }
+}

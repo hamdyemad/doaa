@@ -1,0 +1,13 @@
+.send_notes_page {
+    input[type="email"] {
+        direction: ltr;
+    }
+    input[type="submit"] {
+        display: block;
+        width: 200px;
+        margin: auto;
+        @media (max-width: 991px) {
+            width: 100%;
+        }
+    }
+}

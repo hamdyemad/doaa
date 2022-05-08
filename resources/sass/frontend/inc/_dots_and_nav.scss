@@ -1,0 +1,60 @@
+.owl-nav {
+    display: block;
+    @media (max-width: 991px) {
+        display: none;
+    }
+    button {
+        transition: all 0.3s ease-in-out;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        text-align: center;
+        background-color: var(--bs-primary) !important;
+        border-radius: 50%;
+        pointer-events: all;
+        &:hover {
+            opacity: 0.8;
+        }
+        &.owl-prev {
+            right: 15px;
+        }
+        &.owl-next {
+            left: 15px;
+        }
+        span {
+            color: #fff;
+            font-size: 40px;
+            line-height: 35px;
+            display: inherit;
+            height: 100%;
+        }
+    }
+}
+.owl-dots {
+    @media (min-width: 992px) {
+        display: none;
+    }
+    text-align: center;
+    margin: 5px 0;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    button {
+        transition: all 0.3s ease-in-out;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: var(--bs-gray-500);
+        margin: 0px 5px;
+        @media (max-width: 991px) {
+            width: 10px;
+            height: 10px;
+        }
+        &.active {
+            background-color: $primary;
+        }
+    }
+}

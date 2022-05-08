@@ -1,0 +1,161 @@
+.navbar {
+    direction: ltr;
+    display: block;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0px 10px #c8c8c8;
+    > .container {
+        display: block;
+        @media (min-width: 991px) {
+            align-items: unset;
+        }
+        @media (max-width: 991px) {
+            padding: 10px 15px;
+        }
+    }
+    .upper_nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 0;
+        width: 100%;
+    }
+    form {
+        display: flex;
+        align-items: center;
+        input,
+        button {
+            border: 1px solid var(--bs-gray-400);
+            border-radius: 15px;
+        }
+        button {
+            padding: 5px 25px;
+            margin-inline-start: 10px;
+            margin-inline-end: 10px;
+        }
+        input {
+            width: 500px;
+            direction: rtl;
+            @media (max-width: 991px) {
+                width: auto;
+            }
+        }
+    }
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-brand img {
+        width: 200px;
+        height: 60px;
+        @media (max-width: 991px) {
+            width: 170px;
+            height: 40px;
+        }
+    }
+    .navbar-toggler {
+        position: relative;
+        height: 30px;
+        width: 40px;
+        span {
+            transition: all 0.3s ease-in-out;
+            left: 0;
+            position: absolute;
+            content: "";
+            height: 5px;
+            border-radius: 10px;
+            width: 30px;
+            background-color: $primary;
+
+            &:first-of-type {
+                top: 0px;
+            }
+            &:nth-of-type(2) {
+                top: 10px;
+            }
+            &:last-of-type {
+                top: 20px;
+            }
+        }
+        &[aria-expanded="true"] {
+            span {
+                &:first-of-type {
+                    transform: rotate(-45deg);
+                    top: 10px;
+                }
+                &:nth-last-of-type(2) {
+                    opacity: 0;
+                    left: -15px;
+                }
+                &:last-of-type {
+                    transform: rotate(45deg);
+                    top: 10px;
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        background-color: #95ceff;
+        @media (max-width: 991px) {
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            right: -100%;
+            background: #fff;
+            box-shadow: 0 0px 20px #c8c8c8;
+            top: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+        &.show {
+            right: 0;
+        }
+        .container {
+            @media (max-width: 991px) {
+                padding: 0;
+            }
+        }
+    }
+
+    .navbar-nav {
+        height: 100%;
+        justify-content: center;
+        @media (max-width: 991px) {
+            padding: 0px;
+        }
+        .nav-item {
+            padding: 10px 5px;
+            @media (max-width: 991px) {
+                padding: 0px;
+            }
+            .nav-link {
+                cursor: pointer;
+                position: relative;
+                transition: all 0.2s ease-in-out;
+                font-weight: bold;
+                letter-spacing: 1px;
+                // border-radius: 25px;
+                padding: 10px 25px;
+                color: #fff;
+                @media (max-width: 991px) {
+                    color: $dark;
+                }
+                // @media (min-width: 992px) {
+                //     border: 1px solid $primary;
+                // }
+                &:hover,
+                &.active_link {
+                    background-color: $primary;
+                    border-radius: 25px;
+                    @media (max-width: 992px) {
+                        border-radius: unset;
+                        padding-right: 35px;
+                        color: #fff;
+                    }
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

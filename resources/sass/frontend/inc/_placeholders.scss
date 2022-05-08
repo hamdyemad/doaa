@@ -1,0 +1,34 @@
+%info {
+    .info {
+        font-family: "Amiri", serif;
+        border-radius: 5px;
+        border: 5px solid $primary;
+        padding: 10px;
+        .heading {
+            font-weight: bold;
+            font-size: 30px;
+            margin: 0;
+        }
+        .graduation {
+            color: var(--bs-gray);
+        }
+        .send_notes {
+            width: max-content !important;
+            margin: auto !important;
+            &:hover {
+                i {
+                    color: #409245;
+                }
+            }
+            i {
+                transition: all 0.3s ease-in-out;
+                color: #d22d60;
+                opacity: 0.4;
+                font-size: 25px;
+            }
+        }
+        p {
+            margin-bottom: 10px;
+        }
+    }
+}
